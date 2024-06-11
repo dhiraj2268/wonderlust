@@ -1,0 +1,43 @@
+<% layout("/layouts/boilerplate")%>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <br /><br />
+            <h2>create a new listing</h2>
+    <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" placeholder="Add catchy title" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="enter decription" type="text" class="form-control" required></textarea> 
+            <div class="invalid-feedback">Please enter a sort description</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Uplode Image</label>
+            <input name="listing[image]" type="file" class="form-control">
+        </div>
+        <div class="row">
+
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">price</label>
+                <input  name="listing[price]" placeholder="1350" class="form-control" required >
+                <div class="invalid-feedback">please enter a valid price</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">country</label>
+                <input type="text" name="listing[country]" placeholder="india" class="form-control" required>
+                <div class="invalid-feedback">please enter the country Name</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" placeholder="Odisha Berhampur" class="form-control" required>
+            <div class="invalid-feedback">Location Should be valid</div>
+        </div>
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+        <br /><br />
+    </form>
+</div>
+</div>
